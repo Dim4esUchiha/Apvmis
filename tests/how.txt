@@ -1,0 +1,7 @@
+1. OR_GATE.vhd => run syntehesis
+2. OR_tb.vhd => run simulation(behaviour)
+3. на диаграмме выбираем время и run for t sec.
+
+
+KEKWait
+https://www.doulos.com/knowhow/perl/vhdl-testbench-creation-using-perl/

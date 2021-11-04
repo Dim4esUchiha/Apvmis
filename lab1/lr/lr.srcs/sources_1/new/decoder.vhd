@@ -138,7 +138,7 @@ begin
      --
      (not lt and birbo));
      -------------------------------------------------------------------------------------------------------
-     g<= ((not x3 and not x2 and x1 and not x0 and lt and rbi and birbo) or
+     g<= ((not x3 and not x2 and x1 and not x0 and lt and birbo) or --(not x3 and not x2 and x1 and not x0 and lt and rbi and birbo) KEKW
      (not x3 and not x2 and x1 and x0 and lt and birbo) or
      --
      (not x3 and x2 and not x1 and not x0 and lt and birbo) or
