@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sun Nov  7 01:57:50 2021
-# Process ID: 1260
+# Start of session at: Tue Nov  9 22:20:34 2021
+# Process ID: 13464
 # Current directory: C:/Users/dimas/OneDrive/Desktop/7sem/APVMiS_Labs/lab1/lr/lr.runs/synth_1
 # Command line: vivado.exe -log decoder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source decoder.tcl
 # Log file: C:/Users/dimas/OneDrive/Desktop/7sem/APVMiS_Labs/lab1/lr/lr.runs/synth_1/decoder.vds

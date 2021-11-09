@@ -14,7 +14,6 @@ architecture bench of decoder_tb is
             X0 : IN STD_LOGIC;
             LT : in STD_LOGIC;
             RBI : in STD_LOGIC;
-            BIRBO : in STD_LOGIC;
             A : OUT STD_LOGIC;
             B : OUT STD_LOGIC;
             C : OUT STD_LOGIC;
@@ -30,7 +29,6 @@ architecture bench of decoder_tb is
   signal X0: STD_LOGIC;
   signal LT: STD_LOGIC;
   signal RBI: STD_LOGIC;
-  signal BIRBO: STD_LOGIC;
   signal A: STD_LOGIC;
   signal B: STD_LOGIC;
   signal C: STD_LOGIC;
@@ -47,7 +45,6 @@ begin
                           X0    => X0,
                           LT    => LT,
                           RBI   => RBI,
-                          BIRBO => BIRBO,
                           A     => A,
                           B     => B,
                           C     => C,
@@ -58,16 +55,6 @@ begin
 
   stimulus: process
   begin
-  
---    x3<='0';
---    x2<='0';
---    x1<='0';
---    x0<='0';
---    lt<='1';
---    rbi<='1';
---    birbo<='1';
---    wait for 10 ns;
-
 
     for first in std_logic range '0' to '1' loop
         for second in std_logic range '0' to '1' loop
@@ -75,16 +62,13 @@ begin
                 for fourth in std_logic range '0' to '1' loop
                     for fifth in std_logic range '0' to '1' loop
                         for sixth in std_logic range '0' to '1' loop
-                            for seventh in std_logic range '0' to '1' loop
                                 lt<= first;
                                 rbi<= second;
                                 x3<= third;
                                 x2<= fourth;
                                 x1<= fifth;
                                 x0<= sixth;
-                                birbo<= seventh;
-                                wait for 10 ns;
-                            end loop; 
+                                wait for 10 ps; 
                         end loop;
                     end loop;
                 end loop;
@@ -93,14 +77,15 @@ begin
     end loop;
 
 
-    --0
+
+--      THIS CASES Below WORK Properly (100%)
+--    --0
 --        lt<= '1';
 --        rbi<= '1';
 --        x3<= '0';
 --        x2<= '0';
 --        x1<= '0';
 --        x0<= '0';
---        birbo<= '1';
 --        wait for 10 ns;
 --     --1
 --        lt<= '1';
@@ -109,7 +94,6 @@ begin
 --        x2<= '0';
 --        x1<= '0';
 --        x0<= '1';
---        birbo<='1';
 --        wait for 10 ns;
 --     --2   
 --        lt<= '1';
@@ -118,7 +102,6 @@ begin
 --        x2<= '0';
 --        x1<= '1';
 --        x0<= '0';
---        birbo<='1';
 --        wait for 10 ns;
 --      --3
 --        lt<= '1';
@@ -126,8 +109,7 @@ begin
 --        x3<= '0';
 --        x2<= '0';
 --        x1<= '1';
---        x0<= '1';   
---        birbo<='1';     
+--        x0<= '1';     
 --        wait for 10 ns;
 --        --4 
 --        lt<= '1';
@@ -135,8 +117,7 @@ begin
 --        x3<= '0';
 --        x2<= '1';
 --        x1<= '0';
---        x0<= '0';  
---        birbo<='1';   
+--        x0<= '0';     
 --        wait for 10 ns;
 --        --5
 --        lt<= '1';
@@ -145,7 +126,6 @@ begin
 --        x2<= '1';
 --        x1<= '0';
 --        x0<= '1';
---        birbo<='1';
 --        wait for 10 ns;
 --        --6
 --        lt<= '1';
@@ -154,7 +134,6 @@ begin
 --        x2<= '1';
 --        x1<= '1';
 --        x0<= '0';
---        birbo<='1';
 --        wait for 10 ns;
 --        --7
 --        lt<= '1';
@@ -163,7 +142,6 @@ begin
 --        x2<= '1';
 --        x1<= '1';
 --        x0<= '1';
---        birbo<='1';
 --        wait for 10 ns;
 --        --8
 --        lt<= '1';
@@ -172,7 +150,6 @@ begin
 --        x2<= '0';
 --        x1<= '0';
 --        x0<= '0';
---        birbo<='1';
 --        wait for 10 ns;
 --        --9
 --        lt<= '1';
@@ -181,7 +158,6 @@ begin
 --        x2<= '0';
 --        x1<= '0';
 --        x0<= '1';
---        birbo<='1';
 --        wait for 10 ns;
 --        --10
 --        lt<= '1';
@@ -190,7 +166,6 @@ begin
 --        x2<= '0';
 --        x1<= '1';
 --        x0<= '0';
---        birbo<='1';
 --        wait for 10 ns;
 --        --11
 --        lt<= '1';
@@ -199,7 +174,6 @@ begin
 --        x2<= '0';
 --        x1<= '1';
 --        x0<= '1';
---        birbo<='1';
 --        wait for 10 ns;
 --        --12
 --        lt<= '1';
@@ -208,7 +182,6 @@ begin
 --        x2<= '1';
 --        x1<= '0';
 --        x0<= '0';
---        birbo<='1';
 --        wait for 10 ns;
 --        --13
 --        lt<= '1';
@@ -217,7 +190,6 @@ begin
 --        x2<= '1';
 --        x1<= '0';
 --        x0<= '1';
---        birbo<='1';
 --        wait for 10 ns;
 --        --14
 --        lt<= '1';
@@ -226,7 +198,6 @@ begin
 --        x2<= '1';
 --        x1<= '1';
 --        x0<= '0';
---        birbo<='1';
 --        wait for 10 ns;
 --        --15
 --        lt<= '1';
@@ -235,11 +206,10 @@ begin
 --        x2<= '1';
 --        x1<= '1';
 --        x0<= '1';
---        birbo<='1';
 --        wait for 10 ns;
---        --16
---        birbo<= '0';
---        wait for 10 ns;
+----        --16
+----        birbo<= '0';
+----        wait for 10 ns;
 --        --17
 --        lt<= '1';
 --        rbi<= '0';
@@ -247,11 +217,9 @@ begin
 --        x2<= '0';
 --        x1<= '0';
 --        x0<= '0';
---        birbo<= '0';
 --        wait for 10 ns;
 --        --18
 --        lt <= '0';
---        birbo<= '1';
 --        wait for 10 ns;
   end process;
 end;
