@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dimas/OneDrive/Desktop/7sem/APVMiS_Labs/laba_2F/lab2/lab2.srcs/sources_1/new/shift_regg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity shift_regg
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/dimas/OneDrive/Desktop/7sem/APVMiS_Labs/laba_2F/lab2/lab2.srcs/sim_1/new/shift_regg_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity shift_regg_test

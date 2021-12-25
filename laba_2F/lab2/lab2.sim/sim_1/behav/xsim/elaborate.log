@@ -1,0 +1,16 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 309fd6e0daaa4097b3a9ed23ccd8f994 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot shift_regg_test_behav xil_defaultlib.shift_regg_test -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.jk_trigger [jk_trigger_default]
+Compiling architecture behavioral of entity xil_defaultlib.shift_regg [shift_regg_default]
+Compiling architecture behavior of entity xil_defaultlib.shift_regg_test
+Built simulation snapshot shift_regg_test_behav
